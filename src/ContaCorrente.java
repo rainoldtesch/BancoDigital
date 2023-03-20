@@ -15,7 +15,7 @@ public class ContaCorrente extends Conta implements Tributavel {
 
     @Override
     public double valorImposto(){
-        return this.chequeEspecial* 0.02;
+        return this.chequeEspecial * 0.02;
     }
 
     public void sacar(Double valor) {
@@ -23,12 +23,12 @@ public class ContaCorrente extends Conta implements Tributavel {
             System.out.println("Saldo indisponível para saque");
         }
         else {
-            this.saldo-=saldo;
+            this.saldo -= saldo;
         }
     }
 
     public void depositar(Double valor) {
-        this.saldo+=saldo;
+        this.saldo += saldo;
     }
 
     public double getSaldo() { return (this.chequeEspecial + this.saldo); }

@@ -49,7 +49,7 @@ public class MenuOpcoes {
         int opcao = 0;
         do {
             System.out.println("------------------------------");
-            System.out.println("   *** Tipo da conta de Banco ***  ");
+            System.out.println("   *** Escolha tipo da conta  ***  ");
             System.out.println("   |1.|  Conta Poupança            |");
             System.out.println("   |2.|  Conta Corrente            |");
             System.out.println("   |3.|  Conta Salário             |");
@@ -81,13 +81,13 @@ public class MenuOpcoes {
 
         int opcao = 0;
         do {
-            System.out.println("------------------------------");
-            System.out.println("   *** Tipo de conta no Banco ***  ");
-            System.out.println("   |1.|  Conta Poupança            |");
-            System.out.println("   |2.|  Conta Corrente            |");
-            System.out.println("   |3.|  Conta Salário             |");
-            System.out.println("   |4.|  Voltar ao Menu Principal  |");
-            System.out.println("------------------------------");
+            System.out.println("------------------------------------");
+            System.out.println("   *** Escolha o tipo de conta ***  ");
+            System.out.println("   | 1 |  Conta Poupança            |");
+            System.out.println("   | 2 |  Conta Corrente            |");
+            System.out.println("   | 3 |  Conta Salário             |");
+            System.out.println("   | 4 |  Voltar ao Menu Principal  |");
+            System.out.println("-------------------------------------");
 
             Scanner menu = new Scanner(System.in);
             System.out.print("Digite o Tipo de Conta: ");
@@ -126,13 +126,13 @@ public class MenuOpcoes {
 
         int opcao = 0;
         do {
-            System.out.println("------------------------------    ");
-            System.out.println("          *** Transação ***       ");
-            System.out.println("   |1.|  Conta Poupança            |");
-            System.out.println("   |2.|  Conta Corrente            |");
-            System.out.println("   |3.|  Conta Salário             |");
-            System.out.println("   |4.|  Voltar ao Menu Principal  |");
-            System.out.println("------------------------------");
+            System.out.println("---------------------------------    ");
+            System.out.println("          ***  Transação  ***        ");
+            System.out.println("   | 1 |  Conta Poupança            |");
+            System.out.println("   | 2 |  Conta Corrente            |");
+            System.out.println("   | 3 |  Conta Salário             |");
+            System.out.println("   | 4 |  Voltar ao Menu Principal  |");
+            System.out.println("-------------------------------------");
 
             Scanner menu = new Scanner(System.in);
             System.out.print("Digite o Tipo de Conta: ");
@@ -141,7 +141,7 @@ public class MenuOpcoes {
             System.out.print("Digite o Tipo de Conta Destino: ");
             Integer tipoDeContaDestino = menu.nextInt();
 
-            System.out.print("Digite o valor da transferencia: ");
+            System.out.print("Digite o valor da transferência: ");
             Double valor = menu.nextDouble();
 
             gerente.transferir(tipoDeConta, tipoDeContaDestino, valor, nome, destino);
