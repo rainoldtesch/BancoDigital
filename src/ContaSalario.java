@@ -11,15 +11,15 @@ public class ContaSalario extends Conta implements Tributavel {
 
     @Override
     public double valorImposto(){
-        return this.getSaldo()* 0.02;
+        return this.getSaldo() * 0.02;
     }
 
     public void sacar(Double valor) {
         if (this.limite == 0) {
-            System.out.println("Atingido valor máximo para saque.");
+            System.out.println("-->> Atingido valor máximo para saque <<--");
         }
         else{
-            System.out.println("Saques disponiveis: "  + this.limite);
+            System.out.println("Saques disponíveis: " + this.limite);
             this.limite --;
             this.saldo -= valor;
         }

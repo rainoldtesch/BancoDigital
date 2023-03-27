@@ -154,7 +154,7 @@ public class Gerente {
             if (conta.getNomeCliente().equals(nome)) {
                 System.out.println(conta.getNomeCliente());
 
-                System.out.println(conta.Saldo());
+                System.out.println("Seu novo saldo é: " + conta.Saldo());
             }
         }
     }

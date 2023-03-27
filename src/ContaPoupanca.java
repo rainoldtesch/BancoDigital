@@ -17,7 +17,7 @@ public class ContaPoupanca extends Conta{
 
     public void sacar (double valor) {
         if(valor > this.getSaldo()) {
-            System.out.println("Saldo indisponivel para o valor de saque");
+            System.out.println("-->> Saldo insuficiente para saque <<--");
         }
         else {
             this.saldo -= valor;
