@@ -24,8 +24,10 @@ public class Gerente {
                 int dia = cliente.nextInt();
 
                 Scanner cliente2 = new Scanner(System.in);
-                System.out.println("Digite o número da conta: ");
+                System.out.print("Digite o número da conta: ");
                 int numeroDeConta = cliente2.nextInt();
+
+                System.out.println("FINALIZE DIGITANDO [4]");
 
                 conta.CriarContaPoupanca(numeroDeConta, 001,"Alfa", saldo,  dia, 0.05 );
             }
@@ -36,15 +38,17 @@ public class Gerente {
         for (Banco conta : this.contas) {
             if (conta.getNomeCliente().equals(nome)) {
                 Scanner cliente = new Scanner(System.in);
-                System.out.println("Digite o saldo Inicial da Conta: ");
+                System.out.print("Digite o saldo inicial da Conta: ");
                 Double saldo = cliente.nextDouble();
 
-                System.out.println("Digite o valor do seu cheque especial");
+                System.out.print("Digite o valor do cheque especial: ");
                 Double cheque = cliente.nextDouble();
 
                 Scanner cliente2 = new Scanner(System.in);
-                System.out.println("Digite o numero da conta :");
+                System.out.print("Digite o número da conta :");
                 int numeroDeConta = cliente2.nextInt();
+
+                System.out.println("FINALIZE DIGITANDO [4]");
 
                 conta.CriarContaCorrente(numeroDeConta, 001, "Alfa", saldo, cheque);
 
@@ -56,15 +60,17 @@ public class Gerente {
         for (Banco conta : this.contas) {
             if (conta.getNomeCliente().equals(nome)) {
                 Scanner cliente = new Scanner(System.in);
-                System.out.print("Digite o saldo Inicial da Conta: ");
+                System.out.print("Digite o saldo inicial da Conta: ");
                 Double saldo = cliente.nextDouble();
 
-                System.out.println("Digite a quantidades de saques mensais");
+                System.out.print("Digite a quantidade de saques mensais: ");
                 int saques = cliente.nextInt();
 
                 Scanner cliente2 = new Scanner(System.in);
-                System.out.println("Digite o numero da conta :");
+                System.out.print("Digite o número da conta: ");
                 int numeroDeConta = cliente2.nextInt();
+
+                System.out.println("FINALIZE DIGITANDO [4]");
 
                 conta.CriarContaSalario(numeroDeConta, 001, "Alfa",saldo, saques);
             }
@@ -74,12 +80,10 @@ public class Gerente {
     public void SacarPoupanca(String nome) {
         for (Banco conta : this.contas) {
             if (conta.getNomeCliente().equals(nome)) {
-                System.out.println(
-                        conta.getNomeCliente() + " - " + conta.ContaPoupanca.getSaldo()
-                );
+                System.out.println(conta.getNomeCliente() + " - " + conta.ContaPoupanca.getSaldo());
 
                 Scanner cliente = new Scanner(System.in);
-                System.out.print("Digite o quanto quer Sacar: ");
+                System.out.print("Por favor, digite o valor do saque: ");
                 Double valor = cliente.nextDouble();
                 conta.sacarContaPoupanca(valor);
             }
@@ -90,7 +94,7 @@ public class Gerente {
         for (Banco conta : this.contas) {
             if (conta.getNomeCliente().equals(nome)) {
                 Scanner cliente = new Scanner(System.in);
-                System.out.print("Digite o quanto quer Sacar: ");
+                System.out.print("Por favor, digite o valor do saque: ");
                 Double valor = cliente.nextDouble();
                 conta.sacarContaCorrente(valor);
             }
@@ -101,7 +105,7 @@ public class Gerente {
         for (Banco conta : this.contas) {
             if (conta.getNomeCliente().equals(nome)) {
                 Scanner cliente = new Scanner(System.in);
-                System.out.print("Digite o quanto quer Sacar: ");
+                System.out.print("Por favor, digite o valor do saque: ");
                 Double valor = cliente.nextDouble();
                 conta.sacarContaSalario(valor);
             }
@@ -112,7 +116,7 @@ public class Gerente {
         for (Banco conta : this.contas) {
             if (conta.getNomeCliente().equals(nome)) {
                 Scanner cliente = new Scanner(System.in);
-                System.out.print("Digite o valor de deposito: ");
+                System.out.print("Por favor, digite o valor do depósito: ");
                 Double valor = cliente.nextDouble();
                 conta.depositarContaPoupanca(valor);
             }
@@ -123,7 +127,7 @@ public class Gerente {
         for (Banco conta : this.contas) {
             if (conta.getNomeCliente().equals(nome)) {
                 Scanner cliente = new Scanner(System.in);
-                System.out.print("Digite o valor de deposito: ");
+                System.out.print("Por favor, digite o valor do depósito: ");
                 Double valor = cliente.nextDouble();
                 conta.depositarContaSalario(valor);
             }
@@ -134,7 +138,7 @@ public class Gerente {
         for (Banco conta : this.contas) {
             if (conta.getNomeCliente().equals(nome)) {
                 Scanner cliente = new Scanner(System.in);
-                System.out.print("Digite o valor de deposito: ");
+                System.out.print("Por favor, digite o valor do depósito: ");
                 Double valor = cliente.nextDouble();
                 conta.depositarContaCorrente(valor);
             }
@@ -143,14 +147,14 @@ public class Gerente {
 
     public void Saldo() {
         Scanner cliente = new Scanner(System.in);
-        System.out.print("Digite o seu nome: ");
+        System.out.print("Por favor, digite o seu nome: ");
         String nome = cliente.nextLine();
 
         for (Banco conta : this.contas) {
             if (conta.getNomeCliente().equals(nome)) {
                 System.out.println(conta.getNomeCliente());
 
-                System.out.println(conta.Saldo());
+                System.out.println("Seu novo saldo é: " + conta.Saldo());
             }
         }
     }
@@ -158,7 +162,7 @@ public class Gerente {
     public void ContasCadastradas() {
         System.out.println("       | PESSOAS CADASTRADAS |");
         for (Banco conta : this.contas) {
-            System.out.println("Nome: " + conta.getNomeCliente() +" |  Saldo da conta: " +  conta.Saldo() +" | Numero da Conta: "+ conta.numeroDeConta());
+            System.out.println("Nome: " + conta.getNomeCliente() +" |  Saldo da conta: " +  conta.Saldo() +" | Número da Conta: "+ conta.numeroDeConta());
         }
     }
 

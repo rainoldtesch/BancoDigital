@@ -12,15 +12,15 @@ public class ContaPoupanca extends Conta{
     public double getSaldo(){ return this.saldo + this.taxaDeJuros*this.saldo; }
 
     public void depositar (double valor) {
-        this.saldo+=valor;
+        this.saldo += valor;
     }
 
     public void sacar (double valor) {
         if(valor > this.getSaldo()) {
-            System.out.println("Saldo indisponivel para o valor de saque");
+            System.out.println("-->> Saldo insuficiente para saque <<--");
         }
         else {
-            this.saldo-=valor;
+            this.saldo -= valor;
         }
     }
 }
