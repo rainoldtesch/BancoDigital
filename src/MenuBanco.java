@@ -17,7 +17,8 @@ public class MenuBanco {
             System.out.println("   | 4 |  Transferir valores          |");
             System.out.println("   | 5 |  Mostrar total das contas    |");
             System.out.println("   | 6 |  Contas Cadastradas          |");
-            System.out.println("   | 7 |  Sair                        |");
+            System.out.println("   | 7 |  Compras de Clientes         |");
+            System.out.println("   | 8 |  Sair                        |");
             System.out.println("--------------------------------------");
 
             Scanner menu = new Scanner(System.in);
@@ -44,6 +45,9 @@ public class MenuBanco {
                     gerente.ContasCadastradas();
                     break;
                 case 7:
+                    Testa_Cliente.main();
+                    break;
+                case 8:
                     System.out.println("Você saiu do sistema!!!");
                     break;
                 default:
